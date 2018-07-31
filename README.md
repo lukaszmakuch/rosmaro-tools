@@ -1,15 +1,15 @@
-# rosmaro-cli
+# rosmaro-tools
 
 CLI utilities for [Rosmaro](https://rosmaro.js.org).
 
 To get started, get [npm](https://npmjs.com) and then simply type the following command in your terminal:
 ```
-$ npx rosmaro-cli
+$ npx rosmaro-tools
 ```
 
 Available commands are described below.
 
-## npx rosmaro-cli bindings:build path/to/the/bindings/folder
+## npx rosmaro-tools bindings:build path/to/the/bindings/folder
 
 Generates a JavaScript file exporting a factory function that takes an object and returns another object which is meant to be used as [Rosmaro bindings](https://rosmaro.js.org/doc/#building-a-model-bindings).
 
@@ -31,7 +31,7 @@ Rosmaro expects the `bindings` object to reflect the node hierarchy, like this:
 }
 ```
 
-As soon as the number of nodes grows, writing this by hand may be cumbersome. `rosmaro-cli` solves this problem by utilizing a directory-based convention. 
+As soon as the number of nodes grows, writing this by hand may be cumbersome. `rosmaro-tools` solves this problem by utilizing a directory-based convention. 
 
 Instead of manually building the `bindings` object, we create a directory which structure reflects the hierarchy of nodes of our graph:
 ```
@@ -66,9 +66,9 @@ export default (options) => ({
 
 It's basically exporting a function that takes an arbitrary value and returns an object which is a [Rosmaro binding](https://rosmaro.js.org/doc/#bindings-node-bindings). The `options` object is explained below.
 
-As soon as we run `$ npx rosmaro-cli bindings:build path/to/the/bindings/folder`, it's going to generate an `index.js` file in the root directory:
+As soon as we run `$ npx rosmaro-tools bindings:build path/to/the/bindings/folder`, it's going to generate an `index.js` file in the root directory:
 ```
-$ npx rosmaro-cli bindings:build .
+$ npx rosmaro-tools bindings:build .
 Generated index.js!
 $ tree -U
 .

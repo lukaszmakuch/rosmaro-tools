@@ -98,7 +98,7 @@ export default class Build extends Command {
   static description = 'Build a single file exporting the bindings object for Rosmaro based on a directory structure.'
 
   static examples = [
-    `$ rosmaro-cli bindings:build ./my-rosmaro-app/src/bindings
+    `$ rosmaro-tools bindings:build ./my-rosmaro-app/src/bindings
 Generated ./my-rosmaro-app/src/bindings/index.js!
 `,
   ]
