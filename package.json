@@ -1,6 +1,6 @@
 {
   "name": "rosmaro-cli",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Łukasz Makuch @lukaszmakuch",
   "bin": {
     "rosmaro-cli": "./bin/run"
