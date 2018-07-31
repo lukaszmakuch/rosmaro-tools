@@ -1,0 +1,1 @@
+export default (opts) => ({'main:A got': opts});
