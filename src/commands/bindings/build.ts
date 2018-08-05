@@ -119,7 +119,10 @@ Generated ./my-rosmaro-app/src/bindings/index.js!
     const {args: {srcDir}, flags} = this.parse(Build)
 
     const files = glob.sync(
-      path.resolve(srcDir, 'main', "**/index.js")
+      path.resolve(srcDir, 'main', "**/index.js"),
+      {
+        follow: true
+      }
     );
 
     const getRelativePath = filePath => path.relative(srcDir, filePath);
